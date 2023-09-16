@@ -1,7 +1,6 @@
 import { FiDollarSign, FiBookOpen } from "react-icons/fi";
-const Course = ({ course }) => {
+const Course = ({ course, handleSelectCouse }) => {
   const { id, img, title, description, price, credit_hour } = course;
-  console.log(course);
   return (
     <div className="p-4 w-[312px] h-[402px] border  rounded-xl">
       <img className="rounded-lg" src={img} alt="" />
@@ -19,7 +18,10 @@ const Course = ({ course }) => {
           <span>Credit: {credit_hour}hr</span>
         </div>
       </div>
-      <button className="text-lg font-semibold text-[#FFF] w-full mt-6 bg-[#2F80ED] py-2 rounded-lg hover:bg-blue-600 duration-200">
+      <button
+        onClick={() => handleSelectCouse(course)}
+        className="text-lg font-semibold text-[#FFF] w-full mt-6 bg-[#2F80ED] py-2 rounded-lg hover:bg-blue-600 duration-200"
+      >
         Select
       </button>
     </div>
