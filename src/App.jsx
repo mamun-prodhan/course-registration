@@ -3,6 +3,8 @@ import "./App.css";
 import Cart from "./components/Cart/Cart";
 import Courses from "./components/Courses/Courses";
 import Header from "./components/Header/Header";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [selectedCourses, setSelectedCourses] = useState([]);
@@ -16,7 +18,16 @@ function App() {
     );
 
     if (isCourseExists) {
-      alert("already exists");
+      toast.warn("Already exists!", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
     } else {
       const creditHour = totalCreditHour + course.credit_hour;
       if (creditHour <= 20) {
@@ -28,7 +39,16 @@ function App() {
         setTotalCreditHour(creditHour);
         setTotalPrice(price);
       } else {
-        alert("credit hour limit is 20");
+        toast.error("Credit hour limit is 20", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
       }
     }
   };
@@ -37,6 +57,7 @@ function App() {
 
   return (
     <>
+      <ToastContainer />
       <Header></Header>
       <main className="bg-[#F3F3F3] flex flex-col md:flex-row px-16">
         <Courses handleSelectCouse={handleSelectCouse}></Courses>
