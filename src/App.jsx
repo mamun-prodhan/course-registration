@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header></Header>
-      <main className="flex flex-col md:flex-row px-16">
+      <main className="bg-[#F3F3F3] flex flex-col md:flex-row px-16">
         <Courses></Courses>
         <Cart></Cart>
       </main>
