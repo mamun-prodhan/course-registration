@@ -1,6 +1,7 @@
 import { FiDollarSign, FiBookOpen } from "react-icons/fi";
+import PropTypes from "prop-types";
 const Course = ({ course, handleSelectCouse }) => {
-  const { id, img, title, description, price, credit_hour } = course;
+  const { img, title, description, price, credit_hour } = course;
   return (
     <div className="p-4 w-[312px] h-[402px] border  rounded-xl">
       <img className="rounded-lg" src={img} alt="" />
@@ -26,6 +27,11 @@ const Course = ({ course, handleSelectCouse }) => {
       </button>
     </div>
   );
+};
+
+Course.propTypes = {
+  course: PropTypes.object.isRequired,
+  handleSelectCouse: PropTypes.func.isRequired,
 };
 
 export default Course;

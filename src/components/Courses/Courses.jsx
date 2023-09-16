@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Course from "../Course/Course";
 import { useEffect } from "react";
+import PropTypes from "prop-types";
 
 const Courses = ({ handleSelectCouse }) => {
   const [courses, setCourses] = useState([]);
@@ -23,6 +24,10 @@ const Courses = ({ handleSelectCouse }) => {
       </div>
     </div>
   );
+};
+
+Courses.propTypes = {
+  handleSelectCouse: PropTypes.func,
 };
 
 export default Courses;

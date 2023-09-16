@@ -9,4 +9,4 @@
 
 ## State Management
 
-1. In this project for managing state, I have used React state hook, useState(). I declared the state in the common parent component of two child paren component. I lifting up the state in parent component so that i can share it in two child component together. React has one way data binding which is parent to child. So i declared the state in parent and share it to the child component
+In this project for managing state, I have used React state hook, useState(). I declared the state in the common parent component of two child paren component. I lifting up the state in parent component so that i can share it in two child component together. React has one way data binding which is parent to child. So i declared the state in parent and share it to the child component

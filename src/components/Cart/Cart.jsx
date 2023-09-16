@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 const Cart = ({
   selectedCourses,
   totalCreditHour,
@@ -32,6 +33,13 @@ const Cart = ({
       </div>
     </div>
   );
+};
+
+Cart.propTypes = {
+  selectedCourses: PropTypes.array,
+  totalCreditHour: PropTypes.number,
+  totalRemainingHour: PropTypes.number,
+  totalPrice: PropTypes.number,
 };
 
 export default Cart;
