@@ -8,6 +8,7 @@ function App() {
   const [selectedCourses, setSelectedCourses] = useState([]);
   const [totalCreditHour, setTotalCreditHour] = useState(0);
   const [totalRemainingHour, setTotalRemainingHour] = useState(20);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const handleSelectCouse = (course) => {
     const isCourseExists = selectedCourses.find(
@@ -21,9 +22,11 @@ function App() {
       if (creditHour <= 20) {
         const newAddedCourse = [...selectedCourses, course];
         const reminingHour = totalRemainingHour - course.credit_hour;
+        const price = totalPrice + course.price;
         setTotalRemainingHour(reminingHour);
         setSelectedCourses(newAddedCourse);
         setTotalCreditHour(creditHour);
+        setTotalPrice(price);
       } else {
         alert("credit hour limit is 20");
       }
@@ -41,6 +44,7 @@ function App() {
           selectedCourses={selectedCourses}
           totalCreditHour={totalCreditHour}
           totalRemainingHour={totalRemainingHour}
+          totalPrice={totalPrice}
         ></Cart>
       </main>
     </>
