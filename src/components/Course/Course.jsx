@@ -19,6 +19,9 @@ const Course = ({ course }) => {
           <span>Credit: {credit_hour}hr</span>
         </div>
       </div>
+      <button className="text-lg font-semibold text-[#FFF] w-full mt-6 bg-[#2F80ED] py-2 rounded-lg hover:bg-blue-600 duration-200">
+        Select
+      </button>
     </div>
   );
 };
