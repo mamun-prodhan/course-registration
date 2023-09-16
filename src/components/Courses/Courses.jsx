@@ -12,7 +12,7 @@ const Courses = ({ handleSelectCouse }) => {
       .then((data) => setCourses(data));
   }, []);
   return (
-    <div className="w-3/5">
+    <div className="w-3/4">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mx-auto">
         {courses.map((course, idx) => (
           <Course

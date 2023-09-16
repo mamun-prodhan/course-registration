@@ -6,7 +6,7 @@ const Cart = ({
   totalPrice,
 }) => {
   return (
-    <div className="w-2/5">
+    <div className="w-1/4">
       <h3 className="text-lg font-bold text-[#2F80ED] p-6 border-b-2">
         Credit Hour Remaining {totalRemainingHour} hr
       </h3>

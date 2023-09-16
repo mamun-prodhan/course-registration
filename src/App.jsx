@@ -59,7 +59,7 @@ function App() {
     <>
       <ToastContainer />
       <Header></Header>
-      <main className="bg-[#F3F3F3] flex flex-col md:flex-row px-16">
+      <main className="bg-[#F3F3F3] flex flex-col md:flex-row px-16 gap-5">
         <Courses handleSelectCouse={handleSelectCouse}></Courses>
         <Cart
           selectedCourses={selectedCourses}
